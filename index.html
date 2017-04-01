@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <title>Book Space</title>
+    <!--One UI Templates-->
+        <meta name="author" content="pixelcave">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+    
+        <!--One UI CSS-->
+        <link rel="stylesheet" href="css repos/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="css repos/assets/css/oneui.css">
+
+        <script src="libs/angularjs/angular.min.js"></script>
+        <script src="libs/angularjs/angular-route.min.js"></script>
+        <script src="libs/angularjs/ui-bootstrap-tpls.min.js"></script>
+</head>
+
+<body>
+    <!--directives-->
+    <!--Drop Down-->
+    <script src="./app/Directives/DropDown/dropDown.directives.js"></script>
+    <!--Navbars/Sidebars-->
+    <script src="app/Directives/navbar/navbar.js"></script>
+    <script src="app/Directives/sidebars/sidebar1/sidebar1.js"></script>
+    <script src="app/Directives/subdirectives/userLogin/userLogin.js"></script>
+    <!--Modules-->
+    <script src="app/Modules/Login/module.js"></script>
+    <script src="app/Modules/Login/LoginCtrl.js"></script>
+    <script src="./app/Directives/TreeNode/treeNode.js"></script>
+    <!--Main Boiler Plate-->
+    <script src="app/app.js"></script>
+
+    <tree-node ntitle="'Products'" items="[{label:'Latest Products', href:'https://google.com'}]">
+        <drop-down ntitle="'Shime'">
+            <tree-node ntitle="'Dashboard'" items="[{label:'Best Selling', href:'https://google.com'}, {label:'Most Reviewed', href:'https://google.com'}]"></tree-node>
+        </drop-down>
+        <drop-down ntitle="'Kanjo'"></drop-down>
+    </tree-node>
+    <div ng-view></div>
+</body>
+
+</html>

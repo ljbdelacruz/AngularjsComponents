@@ -1,0 +1,14 @@
+<div>
+    <div>
+        <a href="" ng-click="ToggleNode()"><i class="glyphicon-plus" ng-if="(showNode === true) ? false : true"></i>
+                                           <i class="glyphicon-minus" ng-if="(showNode === true) ? true : false"></i>
+                                           {{display}}
+        </a>
+    </div>
+    <div ng-show="showNode">
+        <ul style="list-style: none;">
+            <li ng-repeat="item in itemsList"><a href="{{item.href}}">{{item.label}}</a></li>
+            <li><ng-transclude></ng-transclude></li>
+        </ul>
+    </div>
+</div>
