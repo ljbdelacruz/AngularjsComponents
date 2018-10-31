@@ -16,6 +16,7 @@ angular
                 /*navbars/sidebars*/
                 'directives.sidebar1',
                 'directives.navbar',
+                'directives.navbar2',
                 'directives.treeNode',
                 'directives.dropDown',
                 /*sign ins*/
